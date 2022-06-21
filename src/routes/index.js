@@ -3,14 +3,13 @@ import timezones from "./timezones.routes";
 
 const app = express();
 
-app.use("/timezones/", timezones);
+app.use("/timezones", timezones);
 
 app.use("/", async (req, res) => {
     res.status(200).json({
-        success: true
+        success: true,
+        message: "Welcome to Timezone API"
     })
 })
-
-console.log("Backend de plataforma Pampa 4");
 
 module.exports = app;
