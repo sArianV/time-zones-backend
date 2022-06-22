@@ -14,10 +14,9 @@ export const getTimeZonesFromAPI = async () => {
 }
 
 export const getTimeZoneFromAPI = async ({ name }) => {
-    console.log(name)
     try {
         const response = await axios.get(base_url+"/"+name)
-        console.log(response)
+
         return response?.data || null
     } catch (error) {
         console.log(error)
