@@ -2,7 +2,7 @@ const axios = require("axios");
 
 const base_url = "http://worldtimeapi.org/api/timezone"
 
-export const getTimeZonesFromAPI = async () => {
+const getTimeZonesFromAPI = async () => {
     try {
 
         const response = await axios.get(base_url)
@@ -13,7 +13,7 @@ export const getTimeZonesFromAPI = async () => {
     }
 }
 
-export const getTimeZoneFromAPI = async ({ name }) => {
+const getTimeZoneFromAPI = async ({ name }) => {
     try {
         const response = await axios.get(base_url+"/"+name)
 
@@ -22,4 +22,9 @@ export const getTimeZoneFromAPI = async ({ name }) => {
         console.log(error)
         return
     }
+}
+
+module.exports = {
+    getTimeZonesFromAPI,
+    getTimeZoneFromAPI
 }

@@ -1,5 +1,5 @@
-import { db, COLLECTIONS } from "../db/firebase-db"
-import { getTimeZoneFromAPI, getTimeZonesFromAPI } from "../services/worldTimesAPI"
+const { db, COLLECTIONS } = require("../db/firebase-db")
+const { getTimeZoneFromAPI, getTimeZonesFromAPI } = require("../services/worldTimesAPI")
 
 const getTimeZones = async( req, res ) => {
   const { name } = req.query

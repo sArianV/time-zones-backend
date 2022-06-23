@@ -1,7 +1,7 @@
-import { db, COLLECTIONS } from "../db/firebase-db"
-import { uuid } from 'uuidv4';
+const { db, COLLECTIONS } = require("../db/firebase-db")
+const { uuid } = require('uuidv4');
 
-export const checkUserExistence = async (req, res, next) => {
+const checkUserExistence = async (req, res, next) => {
     const { user_id } = req.query
     let new_id
 
@@ -25,3 +25,5 @@ export const checkUserExistence = async (req, res, next) => {
 
     next()
 }
+
+module.exports = { checkUserExistence }
