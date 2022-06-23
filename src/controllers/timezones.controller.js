@@ -35,7 +35,7 @@ const getUserTimeZones = async( req, res ) => {
     res.status(200).json({
       success: true,
       user_id: user_id,
-      timezones: timezones
+      timezones: timezones?.user_time_zones || []
     })
   } catch (error) {
     console.log(error)
