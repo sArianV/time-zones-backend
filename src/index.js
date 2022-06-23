@@ -1,6 +1,5 @@
 require('dotenv').config();
-import "babel-polyfill";
-import app from './app.js';
+const { app } = require('./app.js');
 
 async function startServer() {
     try {

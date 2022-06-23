@@ -1,5 +1,6 @@
-import express, { json } from 'express';
-import cors from 'cors';
+const express = require('express');
+const json = require("express").json;
+const cors = require('cors');
 
 var path = require('path');
 
@@ -12,4 +13,4 @@ app.use( json() );
 
 app.use(require('./routes')); 
 
-export default app;
+module.exports = { app } ;

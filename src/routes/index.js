@@ -1,5 +1,5 @@
-import express from 'express';
-import timezones from "./timezones.routes";
+const express = require('express');
+const { router: timezones } = require("./timezones.routes");
 
 const app = express();
 
